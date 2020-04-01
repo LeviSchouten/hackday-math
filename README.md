@@ -16,6 +16,7 @@ practice with.
 
 
 ### BONUS
+- Keep score
 - Daily Challenge
 - Improve UX(mouseless)
 - Difficulty levels(backend)
