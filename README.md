@@ -6,6 +6,8 @@ practice with.
 ### TODO's
 - Setting up Backend with Express
   - *GET* : Randomly generated Math exercise (+,  -,  x) 
+  - Add a random a fact about the correct answer to the response, using this API http://numbersapi.com/#42 
+  - If there is no random fact for that number add just a random fact to it using this API: https://uselessfacts.jsph.pl/ 
 
 - Setting up Frontend with React
   - *CARD*: fetch data and generate *Exercise* component with that data
