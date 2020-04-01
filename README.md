@@ -18,6 +18,7 @@ practice with.
 ### BONUS
 - Daily Challenge
 - Difficulty levels(backend)
+- Add more operators(divide?)
 - Leaderboard(users)
 
 
