@@ -17,6 +17,7 @@ practice with.
 
 ### BONUS
 - Daily Challenge
+- Improve UX(mouseless)
 - Difficulty levels(backend)
 - Add more operators(divide?)
 - Leaderboard(users)
