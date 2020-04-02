@@ -1,11 +1,11 @@
 const express = require('express');
-const router = express.Router();
-
 const { generateExercise } = require('../modules/index');
 
-router.get('/', (req, res, next) => {
+const router = express.Router();
+
+router.get('/', (req, res) => { // removed next
   const exercise = generateExercise();
   res.json(exercise);
-})
+});
 
-module.exports = router
+module.exports = router;

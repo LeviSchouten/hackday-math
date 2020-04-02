@@ -1,10 +1,10 @@
 const express = require('express');
-const router = express.Router();
-
 const { regularTrivia } = require('../modules/index');
 
-router.get('/:number?', (req, res, next) => {
-  regularTrivia(res, req.params.number);
-})
+const router = express.Router();
 
-module.exports = router
+router.get('/:number?', (req, res) => { // removed next
+  regularTrivia(res, req.params.number);
+});
+
+module.exports = router;
