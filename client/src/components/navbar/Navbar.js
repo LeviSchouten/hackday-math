@@ -22,8 +22,12 @@ class Navbar extends Component {
     const { active } = this.state
 
     return (
-      <div>
-
+      <div className='navbar'>
+        <ul>
+          <li onClick={this.props.handleClick}>Home</li>
+          <li>Leaderboard</li>
+          <li>About us</li>
+        </ul>
       </div>
     );
   }
