@@ -7,10 +7,6 @@ import './Navbar.css'
 class Navbar extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      active: true
-    }
   }
 
   changeButtonIcon = () => {
@@ -19,14 +15,13 @@ class Navbar extends Component {
   }
 
   render() {
-    const { active } = this.state
 
     return (
       <div className='navbar'>
         <ul>
-          <li onClick={this.props.handleClick}>Home</li>
-          <li>Leaderboard</li>
-          <li>About us</li>
+          <li onClick={() => this.props.handleClick('Card')}>Home</li>
+          <li onClick={() => this.props.handleClick('Leaderboard')}>Leaderboard</li>
+          <li onClick={() => this.props.handleClick('About')}>About us</li>
         </ul>
       </div>
     );

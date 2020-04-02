@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Card from './components/card/Card'
-import Navbar from './components/navbar/Navbar'
+import Navbar from './components/navbar/Navbar';
+import Leaderboard from './components/leaderboard/Leaderboard';
+import About from './components/about/About';
 
 import './App.css';
 
@@ -9,7 +11,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      content: '',
+      content: <Card />,
     }
   }
 
@@ -17,10 +19,10 @@ class App extends Component {
     switch (component) {
       case 'Card':
         return this.setState({ content: <Card /> })
-      case 'Card':
-        return this.setState({ content: <Card /> })
-      case 'Card':
-        return this.setState({ content: <Card /> })
+      case 'Leaderboard':
+        return this.setState({ content: <Leaderboard /> })
+      case 'About':
+        return this.setState({ content: <About /> })
       default:
         return this.setState({ content: <Card /> })
     }

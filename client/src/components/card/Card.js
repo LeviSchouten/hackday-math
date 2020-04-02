@@ -9,12 +9,6 @@ class Card extends Component {
     super(props);
 
     this.state = {
-      exercise: {
-        number1: 43,
-        number2: 19,
-        operator: '-',
-        solution: 24
-      },
       fact: 'Oh.. You\'re quick! We\'re still loading a fact..',
       score: 0,
       correct: false,
