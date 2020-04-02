@@ -17,8 +17,8 @@ class Exercise extends Component {
   handleSubmit = (event) => {
     const { value, solution } = this.state
     event.preventDefault();
-    if (value === solution) return console.log('correct!');
-    console.log('wrong!');
+    if (value !== solution) return console.log('wrong!');
+    this.props.onCorrect()
   }
 
   render() {
