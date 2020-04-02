@@ -4,6 +4,7 @@
   color: white;
   border-radius: 8%;
   height: 200px;
+  box-shadow: 12px 12px #382944;
 }
 
 input[type=submit]{
@@ -12,6 +13,7 @@ input[type=submit]{
   background-color: #ea728c;
   color: #f3d4d4;
   padding: 15px;
+  box-shadow: 8px 8px #c7516b;
   border-radius: 6%;
 }
 

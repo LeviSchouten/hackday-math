@@ -3,6 +3,7 @@
   border-radius: 8%;
   padding: 20px;
   height: 200px;
+  box-shadow: 12px 12px #382944;
 }
 
 .text {
@@ -22,5 +23,6 @@ button {
   color: #f3d4d4;
   padding: 15px;
   border-radius: 6%;
+  box-shadow: 8px 8px #c7516b;
 }
 
