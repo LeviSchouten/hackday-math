@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Exercise.css';
+
 class Exercise extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +31,7 @@ class Exercise extends Component {
     const { number1, number2, operator, solution } = this.props.exercise
 
     return (
-      <div>
+      <div className="exercise">
         <h1>{number1} {operator} {number2}</h1>
         <form onSubmit={this.handleSubmit}>
           <input type="text" value={this.state.value} onChange={this.handleChange} />
