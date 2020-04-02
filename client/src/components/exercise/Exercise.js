@@ -6,8 +6,12 @@ class Exercise extends Component {
 
     this.state = {
       value: '',
-      solution: String(props.exercise.solution)
+      solution: ''
     }
+  }
+
+  componentDidMount() {
+    this.setState({ solution: String(this.props.exercise.solution) })
   }
 
   handleChange = (event) => {

@@ -13,10 +13,34 @@ class Card extends Component {
         operator: '-',
         solution: 24
       },
-      fact: 'Some funny fact here',
+      fact: 'Oh.. You\'re quick! We\'re still loading a fact..',
       score: 0,
-      correct: false
+      correct: false,
+      loading: true
     }
+  }
+
+  componentDidMount() {
+    this.fetchExercise()
+  }
+
+  fetchFact = (number) => {
+    fetch(`http://localhost:5000/trivia/${number}`)
+      .then(res => res.json())
+      .then(res => this.setState({ fact: res.fact }))
+  }
+
+  fetchExercise = () => {
+    fetch('http://localhost:5000/exercise')
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          exercise: res,
+          loading: false
+        })
+        return res
+      })
+      .then(res => this.fetchFact(res.solution))
   }
 
   handleCorrect = () => {
@@ -24,17 +48,30 @@ class Card extends Component {
   }
 
   handleClick = () => {
-    this.setState({ correct: false })
+    this.setState({
+      correct: false,
+      fact: 'Oh.. You\'re quick! We\'re still loading a fact..',
+      loading: true
+    })
+    this.fetchExercise()
+  }
+
+  cardDisplay = () => {
+    const { exercise, fact, correct, loading } = this.state;
+    if (correct) {
+      return <Trivia fact={fact} handleClick={this.handleClick}></Trivia>
+    }
+    return loading
+      ? <h2>Loading...</h2>
+      : <Exercise exercise={exercise} onCorrect={this.handleCorrect}></Exercise>
+
   }
 
   render() {
-    const { exercise, score, fact, correct } = this.state;
+    const { score } = this.state;
     return (
       <div className="card">
-        {correct
-          ? <Trivia fact={fact} handleClick={this.handleClick}></Trivia>
-          : <Exercise exercise={exercise} onCorrect={this.handleCorrect}></Exercise>
-        }
+        {this.cardDisplay()}
         <p className="score">Score: {score}</p>
       </div>
     );
