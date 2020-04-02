@@ -5,13 +5,18 @@
   "main": "server.js",
   "scripts": {
     "lint": "npx eslint '**/*.js'",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "client": "cd ../client && yarn start",
+    "client-install": "cd ../client && yarn",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^5.1.0",
     "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
     "nodemon": "^2.0.2"
   },
   "devDependencies": {
