@@ -16,7 +16,11 @@
   height: 140px;
 }
 
-button {
+.next:hover{
+  animation: click 0.7s forwards;
+}
+
+.next {
   border: none;
   font-size: 1.2rem;
   background-color: #ea728c;

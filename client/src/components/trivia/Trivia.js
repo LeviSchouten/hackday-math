@@ -15,7 +15,7 @@ class Trivia extends Component {
         <div className="text">
           <h1>{fact}</h1>
         </div>
-        <button onClick={handleClick}>Next</button>
+        <button className='next' onClick={handleClick}>Next</button>
       </div>
     );
   }

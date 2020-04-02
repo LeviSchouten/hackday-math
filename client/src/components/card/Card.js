@@ -30,7 +30,7 @@ class Card extends Component {
     if (number < 0) number = number * -1;
     fetch(`http://localhost:5000/trivia/${number}`)
       .then(res => res.json())
-      .then(res => this.setState({ fact: res.fact.replace('%20', ' ') }))
+      .then(res => this.setState({ fact: res.fact.replace(/%20/i, ' ') }))
   }
 
   fetchExercise = () => {
