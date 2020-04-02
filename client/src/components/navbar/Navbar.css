@@ -7,3 +7,35 @@
   float: left;
   padding-left: 50px;
 }
+
+.nav-list {
+  color: #ffe9e9;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  font-size: 1.2rem;
+  padding: 20px;
+  background-color: #fe8484;
+  box-shadow: 15px 0px #c7516b;
+}
+
+.nav-item:hover {
+  animation: click 0.7s forwards;
+}
+
+@keyframes click {
+  0% {
+    transform: translate(0px);
+  }
+
+  100% {
+    transform: translate(40px);
+
+
+    /* transform: translate(10px, 10px);
+    box-shadow: none; */
+  }
+}
