@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Trivia.css'
+import './Trivia.css';
 
 class Trivia extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class Trivia extends Component {
   }
 
   render() {
-    const { fact, handleClick } = this.props
+    const { fact, handleClick } = this.props;
     return (
       <div className="trivia">
         <div className="text">
